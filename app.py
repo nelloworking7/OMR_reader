@@ -1,9 +1,11 @@
 import streamlit as st
-from data.codes import SUBJECT_CODES
-from data.subjects import SUBJECT_LIST
-from utils.grading import grade_answers
-from utils.grid_generation import generate_grids
-from utils.marking_detection import detect_markings
+from codes import SUBJECT_CODES
+from subjects import SUBJECTS
+from grading import grade_omr
+from grid_generation import generate_grids
+from marking_detection import detect_markings
+from PIL import Image
+import numpy as np
 
 def main():
     st.title("OMR 채점 웹앱")
